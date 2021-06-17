@@ -7,9 +7,11 @@ using M8Find.API.Data;
 using M8Find.API.Dtos;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using M8Find.API.Helpers;
 
 namespace M8Find.API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
