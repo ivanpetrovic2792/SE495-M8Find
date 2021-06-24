@@ -4,6 +4,8 @@ import { MemberDetailResolver } from './_resolvers/member-detail.resolver';
 import { appRoutes } from './routes';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { BrowserModule } from '@angular/platform-browser';
@@ -63,6 +65,8 @@ export function tokenGetter()
     NgxGalleryModule,
     FileUploadModule,
     FormsModule,
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
     ReactiveFormsModule,
     BsDropdownModule.forRoot(),
     BsDatepickerModule.forRoot(),
